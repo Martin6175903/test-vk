@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc7959f1-0842-401b-9361-a07fa667b5f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/cats/dto/create-cat.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/cats/entities/cats.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/hooks/queries/cats/useAddingCatInFavorites.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/cats/entities/cats.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/cats/entities/cats.entity.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/.env" beforeDir="false" afterPath="$PROJECT_DIR$/front/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/api/api.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/api/api.helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/cats/CatsItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/cats/CatsItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/layouts/home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/layouts/home/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/ui/button-heart/ButtonHeart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/ui/button-heart/ButtonHeart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/config/api.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/config/api.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/hooks/queries/useGetChunkCats.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/hooks/queries/cats/useGetChunkCats.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/services/cats.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/services/cats.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/shared/types/cats.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/shared/types/cats.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +75,7 @@
       <recent name="E:\all-projects\test-vk\front\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\all-projects\test-vk\front\src\hooks\queries\cats" />
       <recent name="E:\all-projects\test-vk\front\src\components\header" />
       <recent name="E:\all-projects\test-vk\front\src\components\layouts" />
     </key>
@@ -95,7 +99,7 @@
       <workItem from="1750170818081" duration="3312000" />
       <workItem from="1750174180037" duration="6242000" />
       <workItem from="1750225213477" duration="26035000" />
-      <workItem from="1750257086987" duration="7252000" />
+      <workItem from="1750257086987" duration="13165000" />
     </task>
     <servers />
   </component>

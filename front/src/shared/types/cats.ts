@@ -4,3 +4,8 @@ export type Cat = {
   width: number
   height: number
 }
+
+export type CatData = {
+  id_cat: string
+  url_image: string
+}

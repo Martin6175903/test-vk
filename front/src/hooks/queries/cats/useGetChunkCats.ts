@@ -1,5 +1,5 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { catsService } from '../../services/cats.service.ts';
+import { catsService } from '../../../services/cats.service.ts';
 
 export const useGetChunkCats = (limit: number = 15) => {
   return useInfiniteQuery({

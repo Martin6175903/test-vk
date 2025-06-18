@@ -1,5 +1,5 @@
 import MainContainer from '../MainContainer.tsx';
-import { useGetChunkCats } from '../../../hooks/queries/useGetChunkCats.ts';
+import { useGetChunkCats } from '../../../hooks/queries/cats/useGetChunkCats.ts';
 import { Fragment, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import CatsItems from '../../cats/CatsItems.tsx';

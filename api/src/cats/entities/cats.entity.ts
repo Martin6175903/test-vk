@@ -1,8 +1,9 @@
-import { Column, CreateDateColumn, Entity, UpdateDateColumn, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, UpdateDateColumn, PrimaryGeneratedColumn, Generated } from 'typeorm';
 
 @Entity({ name: 'favorites_cats' })
 export class CatsEntity {
   @PrimaryGeneratedColumn()
+  @Generated('uuid')
   id: number;
 
   @Column()
