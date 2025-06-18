@@ -4,6 +4,9 @@
   --color-primary-500: #2196F3;
   --color-primary-600: #1E88E5;
   --color-white-400: #FFFFFF;
+  --color-black-400: #000000;
+  --color-heart-400: #F24E1E;
+  --color-heart-500: #FF3A00;
 }
 
 :root {
@@ -14,7 +17,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #FFFFFF;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

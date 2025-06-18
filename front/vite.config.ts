@@ -9,7 +9,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
     svgr({
-      include: '**/*.svg?react'
+      include: '**/*.svg?react',
+      svgrOptions: {
+        icon: true
+      }
     })
   ]
 });

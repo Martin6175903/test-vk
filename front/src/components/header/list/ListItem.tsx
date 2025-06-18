@@ -17,7 +17,7 @@ const ListItem = ({to, title}: ListItemProps) => {
 
   return (
     <li>
-      <Link className={`inline-block px-5 py-[23px] duration-400 ${isActive ? 'bg-primary-600 text-white-400' : 'bg-primary-500 text-white-400/70'}`} to={to}>{title}</Link>
+      <Link className={`inline-block px-5 py-[23px] duration-400 tracking-wide ${isActive ? 'bg-primary-600 text-white-400' : 'bg-primary-500 text-white-400/70'}`} to={to}>{title}</Link>
     </li>
   );
 };

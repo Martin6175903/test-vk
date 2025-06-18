@@ -1,8 +1,10 @@
+import MainContainer from '../MainContainer.tsx';
+
 const Favorites = () => {
   return (
-    <div>
+    <MainContainer>
       Favorites
-    </div>
+    </MainContainer>
   );
 };
 
