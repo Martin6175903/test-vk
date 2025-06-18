@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc7959f1-0842-401b-9361-a07fa667b5f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/front/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/config/api.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/config/url.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/hooks/queries/useGetChunkCats.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/providers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/services/cats.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/shared/types/cats.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/api/api.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/api/api.helper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/layouts/favorites/Favorites.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/layouts/favorites/Favorites.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/layouts/home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/layouts/home/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/routes/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/routes/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/api/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/app.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/app.service.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -57,22 +49,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore_missing_gitignore": "true",
-    "last_opened_file_path": "E:/all-projects/test-vk/front/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "E:\\all-projects\\test-vk\\api\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/all-projects/test-vk/front/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\all-projects\\test-vk\\api\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\all-projects\test-vk\front\src" />
@@ -100,7 +92,8 @@
       <workItem from="1750166564936" duration="1370000" />
       <workItem from="1750170818081" duration="3312000" />
       <workItem from="1750174180037" duration="6242000" />
-      <workItem from="1750225213477" duration="13026000" />
+      <workItem from="1750225213477" duration="26035000" />
+      <workItem from="1750257086987" duration="3431000" />
     </task>
     <servers />
   </component>
