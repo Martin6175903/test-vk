@@ -11,7 +11,8 @@ const getContentTypeApi = () => ({
 
 const options: CreateAxiosDefaults = {
   baseURL: "",
-  headers: getContentType()
+  headers: getContentType(),
+  withCredentials: true
 }
 
 const optionsApi: CreateAxiosDefaults = {

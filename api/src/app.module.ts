@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import * as process from 'node:process';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { getTypeOrmConfig } from './config/typeorm.config';
+import { CatsModule } from './cats/cats.module';
 
 @Module({
   imports: [
@@ -13,7 +14,8 @@ import { getTypeOrmConfig } from './config/typeorm.config';
       imports: [ConfigModule],
       useFactory: getTypeOrmConfig,
       inject: [ConfigService]
-    })
+    }),
+    CatsModule
   ],
 })
 export class AppModule {}
