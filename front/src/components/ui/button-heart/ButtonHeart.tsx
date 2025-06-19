@@ -11,7 +11,7 @@ interface ButtonHeartProps {
 }
 
 const ButtonHeart = ({cat}: ButtonHeartProps) => {
-  const location = useLocation();
+  const { pathname } = useLocation();
   const {deleteCat, isPendingDeleteCat} = useDeleteCat()
   const {addingCatInFavorites, isPendingAddingCatInFavorites} = useAddingCatInFavorites()
   const [isHoverBtn, setIsHoverBtn] = useState(false);
@@ -20,8 +20,7 @@ const ButtonHeart = ({cat}: ButtonHeartProps) => {
     <button
       disabled={isPendingAddingCatInFavorites || isPendingDeleteCat}
       onClick={() => {
-        console.log(cat);
-        if (location.pathname === '/favorites') deleteCat(cat.id)
+        if (pathname === '/favorites') deleteCat(cat.id)
         else addingCatInFavorites({ id_cat: cat.id, url: cat.url })
       }}
       onMouseOver={() => setIsHoverBtn(true)}
@@ -29,7 +28,7 @@ const ButtonHeart = ({cat}: ButtonHeartProps) => {
       className={'z-10 absolute -top-3 -right-4 sm:top-auto sm:bottom-5 sm:right-4 cursor-pointer group/btn'}
     >
       <div className={'max-sm:hidden'}>
-        {isHoverBtn !== undefined && !isHoverBtn ? (
+        {isHoverBtn !== undefined && pathname !== '/favorites' && !isHoverBtn ? (
           <FavoriteHeart className={'sm:size-12'}/>
         ) : (<FavoriteHeartHover className={'sm:size-12 group-active/btn:[&_path]:fill-heart-500'}/>)}
         {isHoverBtn === undefined && (
@@ -37,7 +36,11 @@ const ButtonHeart = ({cat}: ButtonHeartProps) => {
         )}
       </div>
       <div className={'sm:hidden'}>
-        <FavoriteHeart className={'size-8 sm:size-12 rounded-full group-active/btn:[&_path]:fill-heart-500 bg-white'}/>
+        {pathname === '/favorites' ? (
+          <FavoriteHeartHover className={'size-8 sm:size-12 rounded-full group-active/btn:[&_path]:fill-heart-500'}/>
+        ) : (
+          <FavoriteHeart className={'size-8 sm:size-12 rounded-full group-active/btn:[&_path]:fill-heart-500 bg-white'}/>
+        )}
       </div>
     </button>
   );

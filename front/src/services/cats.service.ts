@@ -1,4 +1,4 @@
-import { axiosApiClassic } from '../api/api.helper.ts';
+import { axiosApiClassic, axiosClassic } from '../api/api.helper.ts';
 import { API_CAT_URL, API_URL } from '../config/api.config.ts';
 import { Cat, CatData } from '../shared/types/cats.ts';
 
@@ -12,7 +12,7 @@ class CatsService {
   }
 
   async findAllCats() {
-    const response = await axiosApiClassic<CatData[]>({
+    const response = await axiosClassic<CatData[]>({
       url: API_URL.cats(),
       method: "GET"
     })
@@ -20,7 +20,7 @@ class CatsService {
   }
 
   async createCat(data: CatData) {
-    const response = await axiosApiClassic<Cat[]>({
+    const response = await axiosClassic<Cat[]>({
       url: API_URL.cats(),
       method: "POST",
       data
@@ -29,7 +29,7 @@ class CatsService {
   }
 
   async deleteCat(catId: string) {
-    const response = await axiosApiClassic({
+    const response = await axiosClassic({
       url: API_URL.cats(`/${catId}`),
       method: "DELETE"
     })
