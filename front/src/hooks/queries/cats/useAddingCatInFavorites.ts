@@ -5,23 +5,30 @@ import toast from 'react-hot-toast';
 import { useMemo } from 'react';
 
 export const useAddingCatInFavorites = () => {
-  const queryClient = useQueryClient()
+  const queryClient = useQueryClient();
 
-  const {mutate: addingCatInFavorites, isPending: isPendingAddingCatInFavorites} = useMutation({
+  const {
+    mutate: addingCatInFavorites,
+    isPending: isPendingAddingCatInFavorites
+  } = useMutation({
     mutationKey: ['adding a cat in favorites'],
     mutationFn: (data: CatData) => catsService.createCat(data),
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ['find all favorites cats']
-      })
+      });
       toast.success('Котик успешно добавлен в избранное!');
     },
     onError: () => {
-      toast.error('Котик не смог добавиться в избранное! :(')
+      toast.error('Котик не смог добавиться в избранное! :(');
     }
-  })
+  });
 
-  return useMemo(() => ({
-    addingCatInFavorites, isPendingAddingCatInFavorites
-  }), [addingCatInFavorites, isPendingAddingCatInFavorites])
-}
+  return useMemo(
+    () => ({
+      addingCatInFavorites,
+      isPendingAddingCatInFavorites
+    }),
+    [addingCatInFavorites, isPendingAddingCatInFavorites]
+  );
+};

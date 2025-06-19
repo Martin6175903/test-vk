@@ -6,21 +6,25 @@ import { useMemo } from 'react';
 export const useDeleteCat = () => {
   const queryClient = useQueryClient();
 
-  const {mutate: deleteCat, isPending: isPendingDeleteCat} = useMutation({
+  const { mutate: deleteCat, isPending: isPendingDeleteCat } = useMutation({
     mutationKey: ['delete cat'],
     mutationFn: (id: string) => catsService.deleteCat(id),
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ['find all favorites cats']
-      })
+      });
       toast.success('Котик успешно удалён из избранного!');
     },
     onError: () => {
-      toast.error('Котик не смог удалиться из избранного! :)')
+      toast.error('Котик не смог удалиться из избранного! :)');
     }
-  })
+  });
 
-  return useMemo(() => ({
-    deleteCat, isPendingDeleteCat
-  }), [deleteCat, isPendingDeleteCat])
-}
+  return useMemo(
+    () => ({
+      deleteCat,
+      isPendingDeleteCat
+    }),
+    [deleteCat, isPendingDeleteCat]
+  );
+};

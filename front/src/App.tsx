@@ -6,11 +6,11 @@ import { routes } from './routes/routes.tsx';
 function App() {
   return (
     <div>
-      <Header/>
+      <Header />
       <Routes>
         {routes.map((route, index) => (
           // Если index не меняется, то можно так сделать не опираясь на id из БД какой-то, поэтому так сделал
-          <Route key={index} path={route.path} element={route.element}/>
+          <Route key={index} path={route.path} element={route.element} />
         ))}
       </Routes>
     </div>

@@ -6,7 +6,10 @@ import { CreateCatDto } from './dto/create-cat.dto';
 
 @Injectable()
 export class CatsService {
-  constructor(@InjectRepository(CatsEntity) private readonly catsRepository: Repository<CatsEntity>) {}
+  constructor(
+    @InjectRepository(CatsEntity)
+    private readonly catsRepository: Repository<CatsEntity>
+  ) {}
 
   async findAll(): Promise<CatsEntity[]> {
     return await this.catsRepository.find({
@@ -23,9 +26,10 @@ export class CatsService {
   }
 
   async delete(id: string) {
-    const cat =  await this.catsRepository.delete(id);
+    const cat = await this.catsRepository.delete(id);
 
-    if (cat.affected === 0) throw new NotFoundException('Cat not found and not deleted');
+    if (cat.affected === 0)
+      throw new NotFoundException('Cat not found and not deleted');
 
     return cat;
   }

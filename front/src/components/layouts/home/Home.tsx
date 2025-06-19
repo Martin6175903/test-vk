@@ -27,20 +27,27 @@ const Home = () => {
   }
 
   if (status === 'error') {
-    return <div className={'my-[50px] text-center'}>Ошибка: {error.message}</div>;
+    return (
+      <div className={'my-[50px] text-center'}>Ошибка: {error.message}</div>
+    );
   }
 
   return (
     <MainContainer>
-      <div className='my-[50px] text-center grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(225px,1fr))] gap-5 lg:gap-12'>
+      <div className="my-[50px] grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-5 text-center sm:grid-cols-[repeat(auto-fit,minmax(225px,1fr))] lg:gap-12">
         {data?.pages.map((page, i) => (
           <Fragment key={i}>
-            <CatsItems cats={page}/>
+            <CatsItems cats={page} />
           </Fragment>
         ))}
       </div>
-      <div ref={ref} className="mt-12 mb-[31px] text-black-400 tracking-wide flex justify-center items-center">
-        {isFetchingNextPage && <div className={'text-center'}>... загружаем еще котиков ...</div>}
+      <div
+        ref={ref}
+        className="text-black-400 mt-12 mb-[31px] flex items-center justify-center tracking-wide"
+      >
+        {isFetchingNextPage && (
+          <div className={'text-center'}>... загружаем еще котиков ...</div>
+        )}
         {!hasNextPage && <div>Это все котики!</div>}
       </div>
     </MainContainer>

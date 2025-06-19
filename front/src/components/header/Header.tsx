@@ -6,7 +6,7 @@ const Header = () => {
     <header className={'bg-primary-500'}>
       <MainContainer>
         <nav>
-          <List/>
+          <List />
         </nav>
       </MainContainer>
     </header>

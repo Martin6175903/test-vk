@@ -3,12 +3,16 @@ import { useMemo } from 'react';
 import { catsService } from '../../../services/cats.service.ts';
 
 export const useFindAllFavoritesCats = () => {
-  const {data: favoritesCats, isLoading: isLoadingFavoritesCats} = useQuery({
+  const { data: favoritesCats, isLoading: isLoadingFavoritesCats } = useQuery({
     queryKey: ['find all favorites cats'],
     queryFn: () => catsService.findAllCats()
-  })
+  });
 
-  return useMemo(() => ({
-    favoritesCats, isLoadingFavoritesCats
-  }), [favoritesCats, isLoadingFavoritesCats])
-}
+  return useMemo(
+    () => ({
+      favoritesCats,
+      isLoadingFavoritesCats
+    }),
+    [favoritesCats, isLoadingFavoritesCats]
+  );
+};

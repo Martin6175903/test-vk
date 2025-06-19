@@ -9,5 +9,5 @@ export const useGetChunkCats = (limit: number = 15) => {
       return lastPage.length < limit ? undefined : allPages.length + 1;
     },
     initialPageParam: 1
-  })
-}
+  });
+};

@@ -16,6 +16,6 @@ import { CatsModule } from './cats/cats.module';
       inject: [ConfigService]
     }),
     CatsModule
-  ],
+  ]
 })
 export class AppModule {}

@@ -7,39 +7,58 @@ import { useLocation } from 'react-router';
 import { useDeleteCat } from '../../../hooks/queries/cats/useDeleteCat.ts';
 
 interface ButtonHeartProps {
-  cat: Cat
+  cat: Cat;
 }
 
-const ButtonHeart = ({cat}: ButtonHeartProps) => {
+const ButtonHeart = ({ cat }: ButtonHeartProps) => {
   const { pathname } = useLocation();
-  const {deleteCat, isPendingDeleteCat} = useDeleteCat()
-  const {addingCatInFavorites, isPendingAddingCatInFavorites} = useAddingCatInFavorites()
+  const { deleteCat, isPendingDeleteCat } = useDeleteCat();
+  const { addingCatInFavorites, isPendingAddingCatInFavorites } =
+    useAddingCatInFavorites();
   const [isHoverBtn, setIsHoverBtn] = useState(false);
 
   return (
     <button
       disabled={isPendingAddingCatInFavorites || isPendingDeleteCat}
       onClick={() => {
-        if (pathname === '/favorites') deleteCat(cat.id)
-        else addingCatInFavorites({ id_cat: cat.id, url: cat.url })
+        if (pathname === '/favorites') deleteCat(cat.id);
+        else addingCatInFavorites({ id_cat: cat.id, url: cat.url });
       }}
       onMouseOver={() => setIsHoverBtn(true)}
       onMouseLeave={() => setIsHoverBtn(false)}
-      className={'z-10 absolute -top-3 -right-4 sm:top-auto sm:bottom-5 sm:right-4 cursor-pointer group/btn'}
+      className={
+        'group/btn absolute -top-3 -right-4 z-10 cursor-pointer sm:top-auto sm:right-4 sm:bottom-5'
+      }
     >
       <div className={'max-sm:hidden'}>
-        {isHoverBtn !== undefined && pathname !== '/favorites' && !isHoverBtn ? (
-          <FavoriteHeart className={'sm:size-12'}/>
-        ) : (<FavoriteHeartHover className={'sm:size-12 group-active/btn:[&_path]:fill-heart-500'}/>)}
+        {isHoverBtn !== undefined &&
+        pathname !== '/favorites' &&
+        !isHoverBtn ? (
+          <FavoriteHeart className={'sm:size-12'} />
+        ) : (
+          <FavoriteHeartHover
+            className={'group-active/btn:[&_path]:fill-heart-500 sm:size-12'}
+          />
+        )}
         {isHoverBtn === undefined && (
-          <FavoriteHeartHover className={'sm:size-12 group-active/btn:[&_path]:fill-heart-500'}/>
+          <FavoriteHeartHover
+            className={'group-active/btn:[&_path]:fill-heart-500 sm:size-12'}
+          />
         )}
       </div>
       <div className={'sm:hidden'}>
         {pathname === '/favorites' ? (
-          <FavoriteHeartHover className={'size-8 sm:size-12 rounded-full group-active/btn:[&_path]:fill-heart-500'}/>
+          <FavoriteHeartHover
+            className={
+              'group-active/btn:[&_path]:fill-heart-500 size-8 rounded-full sm:size-12'
+            }
+          />
         ) : (
-          <FavoriteHeart className={'size-8 sm:size-12 rounded-full group-active/btn:[&_path]:fill-heart-500 bg-white'}/>
+          <FavoriteHeart
+            className={
+              'group-active/btn:[&_path]:fill-heart-500 size-8 rounded-full bg-white sm:size-12'
+            }
+          />
         )}
       </div>
     </button>
