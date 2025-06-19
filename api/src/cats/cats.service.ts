@@ -22,7 +22,7 @@ export class CatsService {
     return await this.catsRepository.save(cat);
   }
 
-  async delete(id: number) {
+  async delete(id: string) {
     const cat =  await this.catsRepository.delete(id);
 
     if (cat.affected === 0) throw new NotFoundException('Cat not found and not deleted');

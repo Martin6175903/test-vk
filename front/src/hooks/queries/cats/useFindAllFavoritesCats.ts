@@ -5,7 +5,7 @@ import { catsService } from '../../../services/cats.service.ts';
 export const useFindAllFavoritesCats = () => {
   const {data: favoritesCats, isLoading: isLoadingFavoritesCats} = useQuery({
     queryKey: ['find all favorites cats'],
-    queryFn: () => catsService.findAllFavoritesCats()
+    queryFn: () => catsService.findAllCats()
   })
 
   return useMemo(() => ({

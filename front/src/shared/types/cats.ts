@@ -6,6 +6,9 @@ export type Cat = {
 }
 
 export type CatData = {
+  id?: string
   id_cat: string
-  url_image: string
+  url: string
+  created_at?: string
+  updated_at?: string
 }

@@ -3,19 +3,27 @@ import FavoriteHeartHover from '../../../assets/icons/favorite_heart_hover.svg?r
 import { useState } from 'react';
 import { useAddingCatInFavorites } from '../../../hooks/queries/cats/useAddingCatInFavorites.ts';
 import { Cat } from '../../../shared/types/cats.ts';
+import { useLocation } from 'react-router';
+import { useDeleteCat } from '../../../hooks/queries/cats/useDeleteCat.ts';
 
 interface ButtonHeartProps {
   cat: Cat
 }
 
 const ButtonHeart = ({cat}: ButtonHeartProps) => {
+  const location = useLocation();
+  const {deleteCat, isPendingDeleteCat} = useDeleteCat()
   const {addingCatInFavorites, isPendingAddingCatInFavorites} = useAddingCatInFavorites()
   const [isHoverBtn, setIsHoverBtn] = useState(false);
 
   return (
     <button
-      disabled={isPendingAddingCatInFavorites}
-      onClick={() => addingCatInFavorites({ id_cat: cat.id, url_image: cat.url })}
+      disabled={isPendingAddingCatInFavorites || isPendingDeleteCat}
+      onClick={() => {
+        console.log(cat);
+        if (location.pathname === '/favorites') deleteCat(cat.id)
+        else addingCatInFavorites({ id_cat: cat.id, url: cat.url })
+      }}
       onMouseOver={() => setIsHoverBtn(true)}
       onMouseLeave={() => setIsHoverBtn(false)}
       className={'z-10 absolute -top-3 -right-4 sm:top-auto sm:bottom-5 sm:right-4 cursor-pointer group/btn'}

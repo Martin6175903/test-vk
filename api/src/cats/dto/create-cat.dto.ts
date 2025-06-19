@@ -7,5 +7,5 @@ export class CreateCatDto {
 
   @IsNotEmpty()
   @IsString()
-  url_image: string;
+  url: string;
 }

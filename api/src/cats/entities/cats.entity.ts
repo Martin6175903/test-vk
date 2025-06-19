@@ -2,15 +2,16 @@ import { Column, CreateDateColumn, Entity, UpdateDateColumn, PrimaryGeneratedCol
 
 @Entity({ name: 'favorites_cats' })
 export class CatsEntity {
-  @PrimaryGeneratedColumn()
-  @Generated('uuid')
-  id: number;
+  @PrimaryGeneratedColumn("uuid")
+  id: string;
 
   @Column()
   id_cat: string;
 
-  @Column()
-  url_image: string;
+  @Column({
+    unique: true
+  })
+  url: string;
 
   @CreateDateColumn()
   createdAt: Date;

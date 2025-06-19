@@ -8,7 +8,7 @@ const Favorites = () => {
     <MainContainer>
       <div className='my-[50px] text-center grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(225px,1fr))] gap-5 lg:gap-12'>
         {isLoadingFavoritesCats && <div>...Loading</div>}
-        {!isLoadingFavoritesCats && <CatsItems cats={favoritesCats}/>}
+        {!isLoadingFavoritesCats && <CatsItems cats={favoritesCats ?? []}/>}
       </div>
     </MainContainer>
   );

@@ -11,7 +11,7 @@ class CatsService {
     return response.data
   }
 
-  async findAllFavoritesCats() {
+  async findAllCats() {
     const response = await axiosApiClassic<CatData[]>({
       url: API_URL.cats(),
       method: "GET"
@@ -30,7 +30,7 @@ class CatsService {
 
   async deleteCat(catId: string) {
     const response = await axiosApiClassic({
-      url: API_URL.cats(`${catId}`),
+      url: API_URL.cats(`/${catId}`),
       method: "DELETE"
     })
     return response.data;

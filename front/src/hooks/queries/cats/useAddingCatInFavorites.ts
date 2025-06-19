@@ -15,6 +15,9 @@ export const useAddingCatInFavorites = () => {
         queryKey: ['find all favorites cats']
       })
       toast.success('Котик успешно добавлен в избранное!');
+    },
+    onError: () => {
+      toast.error('Котик не смог добавиться в избранное! :(')
     }
   })
 

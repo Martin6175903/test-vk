@@ -16,8 +16,8 @@ export class CatsController {
     return this.catsService.create(dto);
   }
 
-  @Delete(':id')
+  @Delete('/:id')
   delete(@Param('id') id: string) {
-    return this.catsService.delete(+id);
+    return this.catsService.delete(id);
   }
 }

@@ -1,8 +1,8 @@
-import { Cat } from '../../shared/types/cats.ts';
+import { Cat, CatData } from '../../shared/types/cats.ts';
 import CatsItem from './CatsItem.tsx';
 
 interface CatsItemsProps {
-  cats: Cat[]
+  cats: Cat[] | CatData[]
 }
 
 const CatsItems = ({cats}: CatsItemsProps) => {
